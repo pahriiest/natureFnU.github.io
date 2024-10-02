@@ -1,0 +1,653 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #2d6a4f; /* Warna hijau utama */
+    margin-bottom: 20px;
+}
+
+/* Header dengan background gradient yang aesthetic */
+header {
+    position: relative;
+    background: linear-gradient(135deg, #2d6a4f 0%, #95d5b2 100%), url('img/1.jpg');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    padding: 50px;
+    text-align: left;
+    min-height: 300px;
+    box-sizing: border-box;
+}
+
+/* Flexbox untuk konten header */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Efek gradasi transparan dengan bayangan pada teks */
+.text-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Logo box minimalis */
+.logo-box {
+    background-color: #2d6a4f;
+    padding: 10px 30px; /* Mengurangi padding agar lebih minimalis */
+    border-radius: 30px; /* Membuat border-radius lebih lembut */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Mengurangi bayangan */
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    width: fit-content; /* Sesuaikan ukuran berdasarkan konten */
+    margin-bottom: 20px; /* Beri sedikit jarak antara logo dan teks */
+}
+
+/* Ukuran dan gaya teks di dalam logo */
+.logo-box h1 {
+    font-size: 2.2em; /* Ukuran lebih kecil dan minimalis */
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px; /* Beri sedikit spasi antar huruf untuk kesan elegan */
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-content {
+        max-width: 100%;
+    }
+
+    .text-box {
+        padding: 15px;
+    }
+
+    .logo-box {
+        max-width: 100%;
+        padding: 8px 20px; /* Lebih kecil di layar kecil */
+    }
+
+    .logo-box h1 {
+        font-size: 1.8em; /* Ukuran logo lebih kecil di layar kecil */
+    }
+}
+
+
+/* Animasi masuk halus */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button dengan hover yang modern */
+.translate-button {
+    margin-top: 30px;
+}
+
+.translate-button button {
+    background-color: #2d6a4f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.translate-button button:hover {
+    background-color: #1b563a;
+    transform: translateY(-5px); /* Efek hover yang mengangkat tombol */
+}
+
+.translate-button button:active {
+    transform: translateY(0);
+}
+
+/* Teks dengan bayangan halus */
+header h1 {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+}
+
+header p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    color: white;
+    text-align: left;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+}
+
+/* Responsif pada layar kecil */
+@media (max-width: 768px) {
+    header {
+        height: 350px;
+        padding-left: 20px;
+    }
+
+    .logo-box h1 {
+        font-size: 2.2em;
+    }
+
+    .text-box {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .translate-button button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 40px 20px;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Legality Company Section */
+.legality {
+    margin-top: 50px;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.legality h2 {
+    font-size: 2.5em;
+    color: #2d6a4f;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.legality-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.legality-text {
+    flex: 1;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}
+
+.legality-image {
+    flex: 1;
+    text-align: center;
+}
+
+.legality-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center; /* Memastikan card terpusat di container */
+}
+
+.product {
+    flex: 1 1 calc(25% - 20px); /* Card ukuran 1/4 dari container dengan jarak */
+    max-width: 300px; /* Maksimal lebar card */
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Transisi untuk hover effect */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover effect untuk card */
+.product:hover {
+    transform: scale(1.05); /* Mengubah ukuran card saat hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Menambah bayangan saat hover */
+    z-index: 1; /* Menempatkan card di atas elemen lain saat hover */
+}
+
+.product img {
+    width: 100%;
+    height: auto; /* Biarkan tinggi gambar menyesuaikan otomatis */
+    object-fit: contain; /* Menjaga proporsi gambar dan memastikan seluruh gambar tampil */
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.product p {
+    font-size: 0.9em;
+    color: #333;
+    text-align: center; /* Menyelaraskan teks di tengah */
+    margin-top: 10px;
+}
+
+/* Responsif pada layar kecil */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 100%; /* Card akan penuh lebar container pada layar kecil */
+        max-width: none; /* Menghapus batasan lebar maksimum pada layar kecil */
+    }
+}
+
+/* Advantages Section */
+.advantages {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantage {
+    width: 45%;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.advantage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.advantage i {
+    font-size: 1.5em;
+    color: #2d6a4f;
+    margin-right: 10px;
+}
+
+.advantage p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .advantages-list {
+        flex-direction: column;
+    }
+
+    .advantage {
+        width: 100%;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 40px 20px; /* Padding di atas dan bawah */
+    text-align: center;
+}
+
+.footer-contact {
+    margin: 0 auto;
+    padding: 20px 15px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    max-width: 800px; /* Membatasi lebar untuk kesan lebih rapi */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.footer-contact h2 {
+    font-size: 1.8em;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+/* Contact Details - Flexbox untuk membuat item sejajar */
+.contact-details {
+    display: flex;
+    justify-content: space-evenly; /* Jarak antar item sama */
+    align-items: center;
+    max-width: 700px; /* Lebar maksimal agar tetap rapi */
+    margin: 0 auto;
+    gap: 20px; /* Jarak antar item */
+    flex-wrap: wrap; /* Responsif */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1em; /* Ukuran font yang lebih kecil dan rapi */
+    width: 200px; /* Memastikan semua item memiliki lebar yang sama */
+}
+
+.contact-item i {
+    font-size: 1.2em;
+    color: #2d6a4f;
+}
+
+/* Nature FnU Description */
+.links h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#footer-desc {
+    font-size: 1.1em;
+    margin-top: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Copyright */
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.85em;
+    margin: 0;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .links h1 {
+        font-size: 1.8em;
+    }
+
+    #footer-desc {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #2d6a4f; /* Warna hijau utama */
+}
+
+/* Header dengan background gradient */
+header {
+    position: relative;
+    background: linear-gradient(135deg, #2d6a4f 0%, #95d5b2 100%), url('img/1.jpg');
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: left;
+    padding: 0 50px;
+    overflow: hidden;
+}
+
+/* Efek teks dan layout header */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.logo-box h1 {
+    font-size: 2.8em;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Konten Umum */
+.section {
+    padding: 50px 20px;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Advantages Section */
+.advantages, .products {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Tambahan bayangan agar terlihat lebih jelas */
+    text-align: left;
+}
+
+.advantages-list, .products-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.advantage, .product {
+    width: 45%;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.advantage:hover, .product:hover {
+    transform: scale(1.05); /* Efek hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar produk */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2d6a4f;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social i {
+    font-size: 1.5em;
+    color: white;
+    margin-right: 10px;
+}
+
+.footer-contact {
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.footer-contact h2 {
+    font-size: 1.8em;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 700px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    width: 200px; /* Memastikan semua item memiliki lebar yang sama */
+}
+
+.contact-item i {
+    font-size: 1.2em;
+    color: #2d6a4f;
+}
+
+/* Media Queries */
+
+/* Untuk layar dengan lebar maksimal 768px (umumnya tablet atau ponsel) */
+@media (max-width: 768px) {
+    header {
+        height: 350px;
+        padding-left: 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        padding: 20px; /* Kurangi padding untuk layar kecil */
+    }
+
+    .text-box {
+        max-width: 100%; /* Buat lebar penuh untuk layar kecil */
+        padding: 15px;
+    }
+
+    .logo-box h1 {
+        font-size: 2.2em; /* Ukuran logo lebih kecil */
+    }
+
+    .products, .advantages-list {
+        flex-direction: column;
+    }
+
+    .product, .advantage {
+        width: 100%; /* Lebar penuh untuk produk dan advantages */
+    }
+
+    .contact-details {
+        flex-direction: column; /* Tata letak vertikal untuk kontak */
+        align-items: center;
+    }
+
+    .footer-contact {
+        max-width: 100%; /* Lebar penuh pada layar kecil */
+        padding: 15px;
+    }
+}
+
+/* Untuk layar yang lebih kecil, seperti ponsel dengan lebar maksimal 480px */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.5em; /* Ukuran teks lebih kecil */
+    }
+
+    .text-box p {
+        font-size: 1em; /* Ukuran teks lebih kecil untuk ponsel */
+    }
+
+    .contact-item {
+        font-size: 0.9em; /* Perkecil ukuran teks untuk kontak */
+    }
+
+    .footer-contact {
+        padding: 10px; /* Kurangi padding lebih lanjut untuk ponsel kecil */
+    }
+}
+
+
